@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "references": [
+    { "path": "../policy" },
+    { "path": "../tooling" },
+    { "path": "../otel" }
+  ],
+  "include": ["src/**/*"]
+}
+

@@ -1,0 +1,33 @@
+{
+  "name": "@hummingbird/gateway",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "hummingbird-gateway": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src",
+    "dev": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@hummingbird/core": "workspace:*",
+    "@hummingbird/policy": "workspace:*",
+    "@hummingbird/otel": "workspace:*",
+    "fastify": "^4.25.0",
+    "@fastify/cors": "^8.4.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.48.0",
+    "dotenv": "^16.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.0",
+    "tsx": "^4.7.0"
+  }
+}
+
